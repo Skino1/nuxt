@@ -14,14 +14,21 @@
     enter-from-class=" opacity-0"
     leave-to-class=" opacity-0"
   >
-    <LoginModal v-if="currentModal == 'login'"></LoginModal>
+    <LoginModal v-show="currentModal == 'login'"></LoginModal>
   </Transition>
-  <RegisterModal v-if="currentModal == 'register'"></RegisterModal>
+    <Transition
+    leave-active-class="-translate-y-full transition duration-100"
+    enter-active-class="translate-y-0 transition duration-100"
+    enter-from-class=" opacity-0"
+    leave-to-class=" opacity-0"
+  >
+  <RegisterModal v-show="currentModal == 'register'"></RegisterModal>
+  </Transition>
   <Transition
     leave-active-class="-translate-x-full transition duration-100"
     enter-active-class="translate-x-0 transition duration-100"
   >
-    <MobileMenu v-if="currentModal == 'menu'"></MobileMenu>
+    <MobileMenu v-show="currentModal == 'menu'"></MobileMenu>
   </Transition>
 </template>
 <script setup lang="ts">
@@ -36,4 +43,5 @@ function closeModal() {
   stateModal.value = !stateModal.value;
   currentModal.value = "none";
 }
+
 </script>

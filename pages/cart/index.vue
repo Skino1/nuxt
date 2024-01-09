@@ -9,6 +9,7 @@
       >
         go to store
       </NuxtLink>
+      
     </div>
     <AdviseCopmonent></AdviseCopmonent>
   </div>

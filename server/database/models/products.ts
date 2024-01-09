@@ -1,11 +1,25 @@
 import connectionMysql from '../config/db';
-import product from '../interfaces/products';
+import IProduct from '../interfaces/product'
 
 export default {
-  async findAllproducts() {
-    const query = 'SELECT * FROM products';
+  async findAllProducts() {
+    const query = "SELECT * FROM products";
     const [products] = await connectionMysql.execute(query);
-    return products as product[];
-
-  }
-}
+    return products as IProduct[];
+  },
+  async AddProduct() {
+    const query = "INSERT IN TO products ";
+    const [products] = await connectionMysql.execute(query);
+    return products as IProduct[];
+  },
+  async EditProduct() {
+    const query = "UPDATE products";
+    const [products] = await connectionMysql.execute(query);
+    return products as IProduct[];
+  },
+  async DeleteProduct() {
+    const query = "DROP products";
+    const [products] = await connectionMysql.execute(query);
+    return products as IProduct[];
+  },
+};

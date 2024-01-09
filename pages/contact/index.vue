@@ -1,9 +1,9 @@
 <template>
       <div class="cont w-[1200px] mx-auto py-8" >
 <div class="text-center text-4xl uppercase font-bold mb-[85px]">Contact</div>
-<div class="flex justify-between">
+<div class="flex justify-between ">
   <div class="w-[750px]">
-    <div class="flex justify-between mb-4">
+    <div class="flex justify-between mb-4 flex-wrap">
       <div class="flex items-center">
       <img src="assets/SVG/tabler_map-2.svg" alt="">
       <p class=" uppercase text-xl ml-[35px]">New York <br> bakers s.t. 68</p>

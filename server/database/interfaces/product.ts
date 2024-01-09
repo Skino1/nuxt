@@ -1,4 +1,4 @@
-interface product {
+interface IProduct {
   id: number;
   name: string;
   type: number;
@@ -8,4 +8,4 @@ interface product {
   count: number;
 }
 
-export default product;
+export default IProduct;

@@ -1,6 +1,6 @@
 <template>
   <Modal></Modal>
-  <div class="flex flex-col h-screen justify-between">
+  <div class="flex flex-col h-screen justify-between" :class="[stateModal == true ? '' : 'overflow-hidden']">
     <header>
       <div class="cont w-[1200px] mx-auto py-8" id="header">
         <div
@@ -57,6 +57,7 @@
 
 const currentModal = useState('currentModal');
 const stateModal = useState('closeModal')
+// const positionLoginButton = loginButton.getBoundingClientRect()
 
 function showMenu() {
   currentModal.value = 'menu';
@@ -69,5 +70,9 @@ function showLogin() {
   console.log(currentModal.value);
   stateModal.value = !stateModal.value;
 };
+
+function posModal() {
+  
+}
 
 </script>
